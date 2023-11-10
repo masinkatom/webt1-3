@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Úspechy študentov</title>
+    <script src="js/plotly-2.27.0.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/range-slider.js" type="module"></script>
+</head>
+
+<body>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <nav class="main-nav-liner"></nav>
+
+    <nav class="main-nav">
+        <div class="container">
+
+            <ul class="list-nav">
+                <li><a href="index.html" class="active">Úspechy študentov</a></li>
+                <li><a href="graph.html">Graf</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="plotly">
+
+    </div>
+
+    <div id="result"></div>
+    <range-slider minimal="10" maximal="20"></range-slider>
+    <range-slider></range-slider>
+    <range-slider minimal="5" maximal="10"></range-slider>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

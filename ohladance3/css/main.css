@@ -1,0 +1,232 @@
+@import url(https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Righteous&display=swap);
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --webte-color-yellow: rgb(255, 234, 0);
+    --webte-color-blue: #0C75A8;
+    --webte-color-orange: #AD5F00;
+    --webte-color-ltBlue: #8fd2ff;
+    --webte-color-ltOrange: #F59520;
+    --webte-color-ltBlack: #7e7e7e;
+    font-size: 10px;
+}
+
+p {
+    font-size: 2rem;
+    margin: .7rem 0;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2.2rem;
+    margin: 2rem 0;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    margin: 0 auto;
+    font-family: 'Righteous', sans-serif;
+    /*background: linear-gradient(135deg, rgba(225, 255, 0, 0.356) 0%, rgba(225, 255, 0, 0.356) 100%) no-repeat;*/
+    background-size: 100px 100px;
+    background-position: 0 0, 50px 50px;
+    /*background-image: linear-gradient(45deg, var(--webte-color-ltBlack) 25%, transparent 25%, transparent 75%, var(--webte-color-ltBlack) 75%, var(--webte-color-ltBlack)),
+                    linear-gradient(45deg, var(--webte-color-ltBlack) 25%, transparent 25%, transparent 75%, var(--webte-color-ltBlack) 75%, var(--webte-color-ltBlack));
+    */
+}
+
+.container {
+    animation: pageload 1s;
+    width: 100%;
+    max-width: 110rem;
+    /* aby neprekrocil tuto hodnotu */
+    margin: 0 auto;
+}
+
+/* nav */
+
+.main-nav-liner {
+    display: none;
+}
+
+.main-nav {
+    background-color: var(--webte-color-blue);
+    width: 100%;
+    height: 5rem;
+    position: sticky;
+    top: -1px;
+    z-index: 3;
+}
+
+.list-nav {
+    height: 5rem;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    color: white;
+    list-style: none;
+    text-align: center;
+    list-style-type: none;
+}
+
+.list-nav li {
+    flex-grow: 1;
+    height: 100%;
+}
+
+.list-nav li:hover {
+    background-color: var(--webte-color-ltOrange);
+    transition: all 500ms ease;
+}
+
+
+.list-nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.list-nav a.active {
+    border-bottom: 5px solid var(--webte-color-ltOrange);
+}
+
+.nav-toggle {
+    display: none;
+}
+
+
+
+
+/* plot */
+
+#plotly {
+    width:600px;
+    height:250px;
+}
+
+
+
+/* media sizing */
+
+@media screen and (max-width: 730px) {
+    :root {
+        font-size: 8px;
+    }
+
+    .main-nav-liner {
+        display: none;
+        position: sticky;
+        top: -1px;
+        height: 6rem;
+        background: var(--webte-color-blue);
+        z-index: 3;
+    }
+
+    .main-nav {
+        background-color: var(--webte-color-blue);
+        height: 19rem;
+
+    }
+
+    .main-nav .container {
+        height: 100%;
+    }
+
+    .list-nav {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: center;
+    }
+
+    .list-nav li {
+        padding: .5rem .5rem;
+        z-index: 4;
+    }
+
+    .list-nav a {
+        font-size: 2.3rem;
+        margin-bottom: 5px;
+    }
+
+    /* Place the timelime to the left */
+    .line::after {
+        left: 31px;
+    }
+
+    .nav-toggle-label {
+        cursor: pointer;
+        position: sticky;
+        float: left;
+        top: 19rem;
+        left: 0;
+        z-index: 3;
+        margin-left: 1rem;
+        color: var(--webte-color-ltBlue);
+        height: 6rem;
+        display: flex;
+        align-items: center;
+        transform: translateY(-19rem);
+    }
+
+    .nav-toggle-label span,
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+        display: block;
+        background: white;
+        height: 2.5px;
+        width: 3rem;
+        border-radius: 2px;
+        position: relative;
+    }
+
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+        content: '';
+        position: absolute;
+    }
+
+    .nav-toggle-label span::before {
+        bottom: 7px;
+    }
+
+    .nav-toggle-label span::after {
+        top: 7px;
+    }
+
+    .nav-toggle:checked~.main-nav {
+        display: none;
+    }
+
+    .nav-toggle:checked~.nav-toggle-label {
+        top: 6rem;
+        transform: translateY(-6rem);
+    }
+
+    .nav-toggle:checked~.main-nav-liner {
+        display: flex;
+    }
+}
