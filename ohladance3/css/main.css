@@ -78,9 +78,6 @@ body {
     padding: 0;
     width: 100%;
     display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: center;
     color: white;
     list-style: none;
     text-align: center;

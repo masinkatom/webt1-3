@@ -19,8 +19,12 @@ class RangeSlider extends HTMLElement {
         this.inputTypeRange.type = "range";
 
         const style = document.createElement("style");
-        style.innerHTML = `.contain 
-        {width: 15rem;border-radius: 5px;padding: 1rem;}`;
+        style.innerHTML = `
+        .contain {
+            width: 15rem;
+            border-radius: 5px;
+            padding: 1rem;
+        }`;
         this.contain.appendChild(this.inputTypeNumber);
         this.contain.appendChild(this.inputTypeRange);
         this.shadowRoot.appendChild(this.contain);
