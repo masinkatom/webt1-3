@@ -8,10 +8,10 @@
 
 :root {
     --webte-color-yellow: rgb(255, 234, 0);
-    --webte-color-blue: #0C75A8;
+    --webte-color-purple: #63699b;
     --webte-color-orange: #AD5F00;
     --webte-color-ltBlue: #8fd2ff;
-    --webte-color-ltOrange: #F59520;
+    --webte-color-green: #98f5cad3;
     --webte-color-ltBlack: #7e7e7e;
     font-size: 10px;
 }
@@ -23,15 +23,17 @@ p {
 
 h1 {
     font-size: 5rem;
+    margin: 2rem 0;
 }
 
 h2 {
     font-size: 2.5rem;
+    margin: 1.5rem 0;
 }
 
 h3 {
     font-size: 2.2rem;
-    margin: 2rem 0;
+    margin: 1.5rem 0;
 }
 
 img {
@@ -64,7 +66,7 @@ body {
 }
 
 .main-nav {
-    background-color: var(--webte-color-blue);
+    background-color: var(--webte-color-purple);
     width: 100%;
     height: 5rem;
     position: sticky;
@@ -87,10 +89,15 @@ body {
 .list-nav li {
     flex-grow: 1;
     height: 100%;
+    width: 100%;
 }
 
 .list-nav li:hover {
-    background-color: var(--webte-color-ltOrange);
+    background-color: var(--webte-color-green);
+    transition: all 500ms ease;
+}
+.list-nav a:hover {
+    color: black;
     transition: all 500ms ease;
 }
 
@@ -103,10 +110,11 @@ body {
     color: white;
     text-decoration: none;
     font-size: 2rem;
+    width: 100%;
 }
 
-.list-nav a.active {
-    border-bottom: 5px solid var(--webte-color-ltOrange);
+.list-nav li.active {
+    border-bottom: 5px solid var(--webte-color-green);
 }
 
 .nav-toggle {
@@ -114,13 +122,21 @@ body {
 }
 
 
+/* content - plot */
 
+.content {
+    width: 100%;
+}
 
-/* plot */
-
-#plotly {
-    width:600px;
-    height:250px;
+.content h1 {
+    padding-left: 1rem;
+    color: var(--webte-color-purple);
+}
+.content h2 {
+    background-color: black;
+    padding: 1rem 0;
+    padding-left: 1rem;
+    color: var(--webte-color-green);
 }
 
 
@@ -137,12 +153,12 @@ body {
         position: sticky;
         top: -1px;
         height: 6rem;
-        background: var(--webte-color-blue);
+        background: var(--webte-color-purple);
         z-index: 3;
     }
 
     .main-nav {
-        background-color: var(--webte-color-blue);
+        background-color: var(--webte-color-purple);
         height: 19rem;
 
     }
@@ -167,11 +183,6 @@ body {
     .list-nav a {
         font-size: 2.3rem;
         margin-bottom: 5px;
-    }
-
-    /* Place the timelime to the left */
-    .line::after {
-        left: 31px;
     }
 
     .nav-toggle-label {

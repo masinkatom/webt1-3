@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Graf</title>
     <script src="js/plotly-2.27.0.min.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="css/main.css">
     <script src="js/range-slider.js" type="module"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" type="image/x-icon" href="../pageIcon.png">
 </head>
 
 <body>
@@ -20,16 +21,18 @@
 
             <ul class="list-nav">
                 <li><a href="index.html">Úspechy študentov</a></li>
-                <li><a href="graph.html" class="active">Graf</a></li>
+                <li class="active"><a href="sinus.html">Sínusoida</a></li>
             </ul>
         </div>
     </nav>
+    <div class="container">
+        <div id="sin-cos-graph"></div>
+        <button class="stop-button">Zastav generovanie</button>
+        <range-slider minimal="10" maximal="20"></range-slider>
+        <range-slider></range-slider>
+        <range-slider minimal="5" maximal="10"></range-slider>
 
-    <div id="result"></div>
-    <range-slider minimal="10" maximal="20"></range-slider>
-    <range-slider></range-slider>
-    <range-slider minimal="5" maximal="10"></range-slider>
-    <script src="js/script.js"></script>
+    </div>
     <script src="js/graph-out.js"></script>
 </body>
 

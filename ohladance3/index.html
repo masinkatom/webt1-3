@@ -7,10 +7,10 @@
     <title>Úspechy študentov</title>
     <script src="js/plotly-2.27.0.min.js" charset="utf-8"></script>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" type="image/x-icon" href="../pageIcon.png">
 </head>
 
 <body>
-
     <input type="checkbox" id="nav-toggle" class="nav-toggle">
     <nav class="main-nav-liner"></nav>
 
@@ -18,20 +18,28 @@
         <div class="container">
 
             <ul class="list-nav">
-                <li><a href="index.html" class="active">Úspechy študentov</a></li>
-                <li><a href="graph.html">Graf</a></li>
+                <li class="active"><a href="index.html">Úspechy študentov</a></li>
+                <li><a href="sinus.html">Sínusoida</a></li>
             </ul>
         </div>
     </nav>
 
     <div class="container">
-        <div id="plotly"></div>
+        <section class="content">
+            <h1>Hodnotenie študentov</h1>
+            <h2>Čiarový diagram</h2>
+            <div id="grades-chartline"></div>
+            <h2>Stĺpcový diagram</h2>
+            <div id="grades-chartbar"></div>
+            <h2>Koláčový diagram</h2>
+            <div id="grades-chartpie"></div>
+            <div id="names"></div></div>
+        </section>
+        
     </div>
-
     
-    
-    <script src="js/script.js"></script>
     <script src="js/plot.js"></script>
+    <script src="js/handle-plots.js"></script>
 </body>
 
 </html>
