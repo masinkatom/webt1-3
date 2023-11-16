@@ -116,7 +116,7 @@ function parseData(unparsedData, type) {
 
 function plotLine(data) {
 
-    const layout = {
+    let layout = {
         barmode: 'stack',
         legend: {
             x: 1,
@@ -146,7 +146,7 @@ var dataBar;
 function plotBar(dataIn) {
 
     dataBar = dataIn.slice();
-    const layout = {
+    let layout = {
         barmode: 'group',
         height: 450,
         legend: {
@@ -168,6 +168,11 @@ function plotBar(dataIn) {
         },
 
         colorway: ['#f3cec9', '#e7a4b6', '#cd7eaf', '#a262a9', '#6f4d96', '#3d3b72', '#182844']
+    }
+
+    if (chartWidthBar < 500) {
+        layout.xaxis.title = "Počet študentov";
+        layout.yaxis.title = "Rok";
     }
     setHVvalues();
     Plotly.newPlot(chartbar, dataBar, layout);

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Graf</title>
+    <title>Sínus & kosínus</title>
     <script src="js/plotly-2.27.0.min.js" charset="utf-8"></script>
     <script src="js/range-slider.js" type="module"></script>
     <link rel="stylesheet" href="css/main.css">
@@ -21,19 +21,42 @@
 
             <ul class="list-nav">
                 <li><a href="index.html">Úspechy študentov</a></li>
-                <li class="active"><a href="sinus.html">Sínusoida</a></li>
+                <li class="active"><a href="sinus.html">Sínusoida 'n kosínusoida</a></li>
             </ul>
         </div>
     </nav>
     <div class="container">
-        <div id="sin-cos-graph"></div>
-        <button class="stop-button">Zastav generovanie</button>
-        <range-slider minimal="10" maximal="20"></range-slider>
-        <range-slider></range-slider>
-        <range-slider minimal="5" maximal="10"></range-slider>
+        <section class="content2">
+            <div id="sin-cos-graph"></div>
+            <div class="checkboxes">
+                <label for="checkbox">
+                    <input type="checkbox" id="checkboxSin" checked>
+                    <p>Sínusoida</p>
+                </label>
+                <label for="checkboxCos">
+                    <input type="checkbox" id="checkboxCos" checked>
+                    <p>Kosínusoida</p>
+                </label>
+                
+            </div>
+            <button id="stop-button">Zastav generovanie</button>
+            <div class="sliders hidden">
+                <div class="slider-item">
+                    <p>Amplitúda sínus</p>
+                    <range-slider id="slider-sin" minimal="0.1" maximal="10" value="1"></range-slider>
+                </div>
+                <div class="slider-item">
+                    <p>Amplitúda kosínus</p>
+                    <range-slider id="slider-cos" minimal="0.1" maximal="10" value="1"></range-slider>
+                </div>
+                
+            </div>
+
+        </section>
 
     </div>
     <script src="js/graph-out.js"></script>
+    <script src="js/handle-function.js"></script>
 </body>
 
 </html>

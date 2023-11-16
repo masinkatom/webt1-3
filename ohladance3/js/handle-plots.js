@@ -73,7 +73,6 @@ function setHVvalues() {
         for (let i = 0; i < dataBar.length; i++) {
             dataBar[i].orientation = "v";
         }
-        
     }
     
     else {
@@ -82,6 +81,7 @@ function setHVvalues() {
     }
 }
 
+var chartWidthBar = document.getElementById('grades-chartbar').offsetWidth;
 
 function updateChartLayout() {
     var chartContainer = document.getElementById('grades-chartline');
@@ -89,7 +89,7 @@ function updateChartLayout() {
     var chartContainer3 = document.getElementById('grades-chartpie');
     
     var chartWidthLine = chartContainer.offsetWidth;
-    var chartWidthBar = chartContainer2.offsetWidth;
+    chartWidthBar = chartContainer2.offsetWidth;
     var chartWidthPie = chartContainer3.offsetWidth;
     
     // Update the layout with the new width
